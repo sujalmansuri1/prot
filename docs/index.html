@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,29 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <header class="hero">
     <div class="hero-content">
       <h1>Hi, I'm <span>Sujal Mansuri</span></h1>
       <p>A passionate Computer Science student who loves learning, building, and experimenting with tech.</p>
-      <a href="resume.pdf" class="btn" download>Download Resume</a>
     </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+<nav class="navbar">
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+  <ul class="nav-menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
 
   <section id="about">
     <h2>About Me</h2>
@@ -37,7 +45,6 @@
     <h2>Skills & Tools</h2>
     <ul>
       <li>HTML & CSS</li>
-      <li>JavaScript Basics</li>
       <li>Python Scripting</li>
       <li>Version Control (Git & GitHub)</li>
       <li>MS Office & Excel</li>
@@ -48,34 +55,53 @@
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Portfolio Website</strong>: Designed and built this personal responsive portfolio from scratch using HTML and CSS.</li>
-      <li><strong>Calculator using Python</strong>: Created a basic console-based calculator as part of Python practice.</li>
-      <li><strong>Frontend for Clothing Brand</strong>: Developed a homepage for a fashion brand during Web Technology subject in college using HTML/CSS.</li>
+      <li><strong>Portfolio Website</strong>: Designed and built this personal responsive portfolio from scratch using
+        HTML and CSS.</li>
+      <li><strong>Calculator using Python</strong>: Created a basic console-based calculator as part of Python practice.
+      </li>
+      <li><strong>Frontend for Clothing Brand</strong>: Developed a homepage for a fashion brand during Web Technology
+        subject in college using HTML/CSS.</li>
     </ul>
   </section>
 
   <section id="education">
     <h2>Education</h2>
     <ul>
-      <li><strong>B.Tech – Computer Science Engineering</strong><br>Aditya Silver Oak Institute of Technology, Gota Ahmedabad<br>June 2023 – In Progress</li>
-      <li><strong>HSC, 12th Pass – 50%</strong><br>Ankur Higher Secondary, Paldi Ahmedabad<br>March 2022 – May 2023</li>
-      <li><strong>SSC, 10th Pass – 50%</strong><br>(School name not specified)</li>
+      <li><strong>B.Tech – Computer Science Engineering</strong><br>Aditya Silver Oak Institute of Technology, Gota
+        Ahmedabad<br>June 2023 – In Progress</li>
+      <li><strong>HSC, 12th Pass – 50%</strong><br> May 2023</li>
+      <li><strong>SSC, 10th Pass – 50%</strong> <br> May 2020</li>
     </ul>
+   
   </section>
+
 
   <section id="contact">
   <h2>Contact</h2>
+
   <p>
-    <a href="mailto:mansurisujal10@gmail.com" target="_blank" style="margin-right: 15px; font-size: 1.5rem; color: #2c3e50;">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
-    <a href="https://github.com/YOUR_USERNAME" target="_blank" style="font-size: 1.5rem; color: #2c3e50;">
-      <i class="fa-brands fa-github"></i>
-    </a>
+    <a href="mailto:mansurisujal10@gmail.com">
+      <i class="fa-solid fa-envelope" style="color: black; margin-right: 8px;"></i>
+    </a> mansurisujal10@gmail.com
+  </p>
+
+  <p>
+    <a href="https://github.com/sujalmansuri1" target="_blank">
+      <i class="fa-brands fa-github" style="color: black; margin-right: 8px;"></i>
+    </a> @sujalmansuri1
+  </p>
+
+  <p>
+    <a href="tel:+91YOUR_PHONE">
+      <i class="fa-solid fa-phone" style="color: black; margin-right: 8px;"></i>
+    </a> +91 9974786168
   </p>
 </section>
-<footer>
-  <p>&copy;  Sujal Mansuri.</p>
-</footer>
+
+
+  <footer>
+    <p>&copy; Sujal Mansuri</p>
+  </footer>
 </body>
+
 </html>
