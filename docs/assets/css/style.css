@@ -1,4 +1,4 @@
-
+/* Base Styles */
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +8,7 @@ body {
   line-height: 1.6;
 }
 
+/* Hero Section */
 .hero {
   background: linear-gradient(135deg, #2c3e50, #3498db);
   color: white;
@@ -35,7 +36,7 @@ body {
   max-width: 600px;
 }
 
-
+/* Resume Button */
 .resume-button {
   text-align: center;
   margin-top: 2rem;
@@ -58,14 +59,45 @@ body {
   color: #1f618d;
 }
 
-
-.navbar {
+/* Navbar */
+.top-nav {
+  position: relative;
   background-color: #ffffff;
   border-bottom: 2px solid #eee;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.menu-icon {
+  display: none;
+  padding: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: #2c3e50;
+  border-radius: 3px;
   position: relative;
-  z-index: 10;
+  transition: 0.3s ease-in-out;
+}
+
+.menu-icon span::before {
+  position: absolute;
+  top: -8px;
+}
+
+.menu-icon span::after {
+  position: absolute;
+  top: 8px;
 }
 
 .nav-menu {
@@ -74,7 +106,7 @@ body {
   justify-content: center;
   gap: 2rem;
   margin: 0;
-  padding: 0;
+  padding: 1rem 0;
 }
 
 .nav-menu li a {
@@ -89,47 +121,7 @@ body {
   color: #3498db;
 }
 
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label {
-  display: none;
-  position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
-  cursor: pointer;
-  height: 20px;
-  width: 30px;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: #2c3e50;
-  height: 3px;
-  width: 100%;
-  border-radius: 3px;
-  position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
-  left: 0;
-}
-
-.nav-toggle-label span::before {
-  top: -8px;
-}
-
-.nav-toggle-label span::after {
-  top: 8px;
-}
-
-
+/* Sections */
 section {
   max-width: 1000px;
   margin: 2rem auto;
@@ -193,7 +185,12 @@ footer a:hover {
   margin-right: 8px;
 }
 
-/* Responsive Design */
+/* Hamburger Toggle */
+#menu-toggle {
+  display: none;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
@@ -208,28 +205,28 @@ footer a:hover {
     padding: 1rem 0.75rem;
   }
 
-  .nav-toggle-label {
+  .menu-icon {
     display: block;
   }
 
   .nav-menu {
     display: none;
     flex-direction: column;
-    background: #ffffff;
-    padding: 1rem 0;
+    background-color: #ffffff;
     width: 100%;
     position: absolute;
     top: 60px;
     left: 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  .nav-toggle:checked + .navbar .nav-menu {
+  #menu-toggle:checked ~ .nav-menu {
     display: flex;
   }
 
   .nav-menu li {
     margin: 10px 0;
+    text-align: center;
   }
 }
