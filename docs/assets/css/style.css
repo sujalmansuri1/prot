@@ -1,232 +1,54 @@
-/* Base Styles */
+/* ========== Base Tweaks ========== */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fefefe;
-  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Section spacing fallback (in case Tailwind isn't loaded or JS fails) */
+section {
+  margin-bottom: 3rem;
+}
+
+/* Typography enhancements */
+h1, h2, h3 {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+p {
+  font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Hero Section */
+/* Link transition fallback */
+a {
+  transition: all 0.3s ease;
+}
+
+/* Hero Section fallback colors */
 .hero {
-  background: linear-gradient(135deg, #2c3e50, #3498db);
+  background: linear-gradient(to right, #0f172a, #1e293b);
   color: white;
-  padding: 5rem 1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.hero-content h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
+.hero span {
+  color: #38bdf8;
 }
 
-.hero-content h1 span {
-  color: #ffffff;
-  font-weight: bold;
+/* Hover for contact buttons */
+#contact a:hover {
+  transform: scale(1.03);
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  max-width: 600px;
+/* GitHub card hover */
+#github img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Resume Button */
-.resume-button {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.btn {
-  background: #ffffff;
-  color: #3498db;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px;
-  border: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.btn:hover {
-  background: #eeeeee;
-  color: #1f618d;
-}
-
-/* Navbar */
-.top-nav {
-  position: relative;
-  background-color: #ffffff;
-  border-bottom: 2px solid #eee;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  padding: 0 1rem;
-}
-
-.menu-icon {
-  display: none;
-  padding: 1.2rem;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.menu-icon span,
-.menu-icon span::before,
-.menu-icon span::after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 25px;
-  background-color: #2c3e50;
-  border-radius: 3px;
-  position: relative;
-  transition: 0.3s ease-in-out;
-}
-
-.menu-icon span::before {
-  position: absolute;
-  top: -8px;
-}
-
-.menu-icon span::after {
-  position: absolute;
-  top: 8px;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 1rem 0;
-}
-
-.nav-menu li a {
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: bold;
-  padding: 0.5rem;
-  transition: color 0.3s;
-}
-
-.nav-menu li a:hover {
-  color: #3498db;
-}
-
-/* Sections */
-section {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-#about {
-  background-color: #e3f2fd;
-}
-
-#skills {
-  background-color: #f1f8e9;
-}
-
-#projects {
-  background-color: #fff3e0;
-}
-
-#education {
-  background-color: #fce4ec;
-}
-
-#contact {
-  background-color: #ede7f6;
-}
-
-h2 {
-  color: #2c3e50;
-  border-bottom: 2px solid #2c3e50;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-ul {
-  list-style-type: square;
-  margin-left: 1.5rem;
-  padding-left: 0.5rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #2c3e50;
-  color: white;
-  margin-top: 3rem;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #3498db;
-}
-
-/* Contact Icons */
-#contact i {
-  color: black;
-  margin-right: 8px;
-}
-
-/* Hamburger Toggle */
-#menu-toggle {
-  display: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  section {
-    padding: 1rem 0.75rem;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #ffffff;
+/* Responsive fallback for badges */
+@media (max-width: 640px) {
+  #contact a {
     width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    border-top: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  #menu-toggle:checked ~ .nav-menu {
-    display: flex;
-  }
-
-  .nav-menu li {
-    margin: 10px 0;
-    text-align: center;
+    justify-content: center;
   }
 }
+
