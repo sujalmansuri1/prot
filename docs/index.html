@@ -4,45 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sujal Mansuri | Web Developer</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Sujal Mansuri </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out both;
+    }
+  </style>
 </head>
 
-<body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span>Sujal Mansuri</span></h1>
-      <p>A passionate Computer Science student who loves learning, building, and experimenting with tech.</p>
-    </div>
+<body class="bg-gray-50 text-gray-900 transition duration-300">
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-blue-900 to-blue-600 text-white p-4 flex justify-between items-center fixed w-full z-50 shadow-md">
+    <div class="text-xl font-bold">Portfolio</div>
+    <button id="menu-btn" class="lg:hidden focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <ul id="menu" class="absolute lg:static top-16 left-0 w-full lg:w-auto lg:flex hidden flex-col lg:flex-row bg-blue-700 lg:bg-transparent text-center lg:text-left transition-all duration-300 ease-in-out shadow-lg lg:shadow-none animate-fade-in">
+      <li><a href="#about" class="block px-6 py-2 hover:bg-blue-800">About</a></li>
+      <li><a href="#education" class="block px-6 py-2 hover:bg-blue-800">Education</a></li>
+      <li><a href="#projects" class="block px-6 py-2 hover:bg-blue-800">Projects</a></li>
+      <li><a href="#skills" class="block px-6 py-2 hover:bg-blue-800">Skills</a></li>
+      <li><a href="#contact" class="block px-6 py-2 hover:bg-blue-800">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="pt-28 pb-16 text-center bg-gradient-to-r from-blue-200 to-blue-300 animate-fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold">Hi I'm Sujal Mansuri</h1>
+    <p class="mt-4 text-lg max-w-2xl mx-auto">A passionate Computer Science student who loves learning, building, and experimenting with tech.</p>
   </header>
 
- <header class="top-nav">
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon"><span></span></label>
-
-  <ul class="nav-menu">
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</header>
-
-
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
+  <!-- About -->
+  <section id="about" class="max-w-3xl mx-auto py-10 px-4 animate-fade-in">
+    <h2 class="text-2xl font-bold mb-4">About Me</h2>
+    <p class="bg-blue-100 p-4 rounded shadow">
       I'm a curious and dedicated Computer Science Engineering student at Aditya Silver Oak Institute of Technology.
       I enjoy learning about software, building small tools, and collaborating on college projects.
       Always exploring new technologies and sharpening my problem-solving skills.
     </p>
   </section>
 
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <ul>
+  <!-- Skills -->
+  <section id="skills" class="max-w-3xl mx-auto py-10 px-4 animate-fade-in">
+    <h2 class="text-2xl font-bold mb-4">Skills & Tools</h2>
+    <ul class="list-disc list-inside space-y-1">
       <li>HTML & CSS</li>
       <li>Python Scripting</li>
       <li>Version Control (Git & GitHub)</li>
@@ -51,56 +74,87 @@
     </ul>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Portfolio Website</strong>: Designed and built this personal responsive portfolio from scratch using
-        HTML and CSS.</li>
-      <li><strong>Calculator using Python</strong>: Created a basic console-based calculator as part of Python practice.
-      </li>
-      <li><strong>Frontend for Clothing Brand</strong>: Developed a homepage for a fashion brand during Web Technology
-        subject in college using HTML/CSS.</li>
+  <!-- Projects -->
+  <section id="projects" class="max-w-3xl mx-auto py-10 px-4 animate-fade-in">
+    <h2 class="text-2xl font-bold mb-4">Projects</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li><strong>Portfolio Website</strong>: Designed and built this personal responsive portfolio from scratch using HTML and CSS.</li>
+      <li><strong>Calculator using Python</strong>: Created a basic console-based calculator as part of Python practice.</li>
+      <li><strong>Frontend for Clothing Brand</strong>: Developed a homepage for a fashion brand using HTML/CSS.</li>
     </ul>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>B.Tech – Computer Science Engineering</strong><br>Aditya Silver Oak Institute of Technology, Gota
-        Ahmedabad<br>June 2023 – In Progress</li>
-      <li><strong>HSC, 12th Pass – 50%</strong><br> May 2023</li>
-      <li><strong>SSC, 10th Pass – 50%</strong> <br> May 2020</li>
+  <!-- Education -->
+  <section id="education" class="max-w-3xl mx-auto py-10 px-4 animate-fade-in">
+    <h2 class="text-2xl font-bold mb-4">Education</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li><strong>B.Tech – Computer Science Engineering</strong><br>Aditya Silver Oak Institute of Technology, Gota Ahmedabad<br>June 2023 – In Progress</li>
+      <li><strong>HSC, 12th Pass – 50%</strong><br>May 2023</li>
+      <li><strong>SSC, 10th Pass – 50%</strong><br>May 2020</li>
     </ul>
-   
   </section>
 
-
-  <section id="contact">
-  <h2>Contact</h2>
-
-  <p>
-    <a href="mailto:mansurisujal10@gmail.com">
-      <i class="fa-solid fa-envelope" style="color: black; margin-right: 8px;"></i>
-    </a> mansurisujal10@gmail.com
-  </p>
-
-  <p>
-    <a href="https://github.com/sujalmansuri1" target="_blank">
-      <i class="fa-brands fa-github" style="color: black; margin-right: 8px;"></i>
-    </a> @sujalmansuri1
-  </p>
-
-  <p>
-    <a href="tel:+91YOUR_PHONE">
-      <i class="fa-solid fa-phone" style="color: black; margin-right: 8px;"></i>
-    </a> +91 9974786168
-  </p>
+  <!-- Contact -->
+  <!-- CONTACT SECTION -->
+<!-- CONTACT SECTION -->
+<!-- CONTACT SECTION -->
+<section id="contact" class="max-w-3xl mx-auto py-10 px-4 animate-fade-in">
+  <h2 class="text-2xl font-bold mb-4 text-center">Contact</h2>
+  <div class="space-y-4 bg-white dark:bg-blue-200 border border-black rounded-xl p-6">
+    <div class="flex flex-col gap-4 sm:flex-row sm:justify-center sm:items-center">
+      <a href="mailto:mansurisujal10@gmail.com" class="flex-1 inline-flex items-center justify-center border border-black px-4 py-2 rounded hover:bg-red-100 dark:hover:bg-red-800 transition duration-300 text-sm text-center">
+        <i class="fa-solid fa-envelope mr-2" style="color: black;"></i> mansurisujal10@gmail.com
+      </a>
+      <a href="https://github.com/sujalmansuri1" target="_blank" class="flex-1 inline-flex items-center justify-center border border-black px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300 text-sm text-center">
+        <i class="fa-brands fa-github mr-2" style="color: black;"></i> @sujalmansuri1
+      </a>
+      <a href="tel:+919974786168" class="flex-1 inline-flex items-center justify-center border border-black px-4 py-2 rounded hover:bg-blue-100 dark:hover:bg-blue-800 transition duration-300 text-sm text-center">
+        <i class="fa-solid fa-phone mr-2" style="color: black;"></i> +91 9974786168
+      </a>
+    </div>
+  </div>
 </section>
 
+<!-- GITHUB ACTIVITY SECTION -->
+<section id="github" class="max-w-6xl mx-auto py-12 px-4 animate-fade-in text-center">
+  <h2 class="text-2xl font-bold mb-8">GitHub Activity</h2>
 
-  <footer>
-    <p>&copy; Sujal Mansuri</p>
+  <!-- Container Box -->
+  <div class="bg-white shadow-lg rounded-2xl p-6 border border-gray-200 dark:bg-gray-900 dark:border-gray-700 transition-all duration-300">
+
+    <!-- Badges -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <img src="https://komarev.com/ghpvc/?username=sujalmansuri1&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views">
+      <img src="https://img.shields.io/github/followers/sujalmansuri1?label=Followers&style=flat-square" alt="GitHub Followers">
+      <img src="https://img.shields.io/github/stars/sujalmansuri1?label=Stars&style=flat-square" alt="GitHub Stars">
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="flex flex-wrap justify-center gap-6">
+      <img src="https://github-readme-stats.vercel.app/api?username=sujalmansuri1&show_icons=true&count_private=true&hide_border=true&include_all_commits=true&theme=github_dark"
+           alt="GitHub Stats"
+           class="rounded-xl shadow-md w-full sm:max-w-sm transform transition-transform hover:scale-105">
+
+      <img src="https://streak-stats.demolab.com?user=sujalmansuri1&theme=dark&hide_border=true&border_radius=5&date_format=M%20j%5B%2C%20Y%5D"
+           alt="GitHub Streak"
+           class="rounded-xl shadow-md w-full sm:max-w-sm transform transition-transform hover:scale-105">
+
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sujalmansuri1&layout=compact&hide_border=true&theme=github_dark"
+           alt="Top Languages"
+           class="rounded-xl shadow-md w-full sm:max-w-sm transform transition-transform hover:scale-105">
+    </div>
+  </div>
+</section>
+  <footer class="text-center text-sm py-6 bg-blue-100 text-blue-900">
+    &copy; Sujal Mansuri
   </footer>
-</body>
 
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
 </html>
