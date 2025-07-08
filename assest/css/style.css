@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content h1 span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.btn {
+  background: #ffffff;
+  color: #3498db;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  background: #eeeeee;
+  color: #1f618d;
+}
+
+nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav a {
+  color: #2c3e50;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#about {
+  background-color: #e3f2fd;
+}
+
+#skills {
+  background-color: #f1f8e9;
+}
+
+#projects {
+  background-color: #fff3e0;
+}
+
+#education {
+  background-color: #fce4ec;
+}
+
+#contact {
+  background-color: #ede7f6;
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #2c3e50;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 1rem 0.75rem;
+  }
+}
